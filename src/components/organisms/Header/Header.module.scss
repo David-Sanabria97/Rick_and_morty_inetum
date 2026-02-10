@@ -1,6 +1,6 @@
 .header {
   background-color: var(--color-surface);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(186, 186, 186, 0.05);
 }
 
 .inner {
@@ -14,7 +14,8 @@
 
 .logo {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 2rem;
   color: var(--color-primary);
   text-decoration: none;
+  font-family: fantasy;
 }
