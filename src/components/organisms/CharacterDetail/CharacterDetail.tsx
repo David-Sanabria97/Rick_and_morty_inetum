@@ -1,12 +1,22 @@
-import styles from "./CharacterDetail.module.scss";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { addRecent } from "@/store/recentSlice";
 import { Character } from "@/types/character";
 import Link from "next/link";
+
+import styles from "./CharacterDetail.module.scss";
 
 interface Props {
   character: Character;
 }
 
 export default function CharacterDetail({ character }: Props) {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(addRecent(character));
+  }, [character, dispatch]);
+
   return (
     <div className={styles.wrapper}>
       <img

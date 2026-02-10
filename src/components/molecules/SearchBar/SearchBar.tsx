@@ -1,16 +1,26 @@
-import Input from "../../atoms/Input/Input";
+"use client";
+
+import Input from "@/components/atoms/Input/Input";
 import styles from "./SearchBar.module.scss";
 
-const SearchBar = ({ value, onChange }: any) => {
+interface SearchBarProps {
+  value: string;
+  onChange: (value: string) => void;
+  placeholder?: string;
+}
+
+export default function SearchBar({
+  value,
+  onChange,
+  placeholder = "Search...",
+}: SearchBarProps) {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.container}>
       <Input
-        placeholder="Buscar personaje..."
         value={value}
-        onChange={onChange}
+        placeholder={placeholder}
+        onChange={(e) => onChange(e.target.value)}
       />
     </div>
   );
-};
-
-export default SearchBar;
+}

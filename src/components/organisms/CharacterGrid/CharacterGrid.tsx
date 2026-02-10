@@ -1,11 +1,17 @@
 "use client";
 
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/index";
 import { useCharacters } from "@/hooks/useCharacters";
 import CharacterCard from "../CharacterCard/CharacterCard";
 import styles from "./CharacterGrid.module.scss";
 
-const CharacterGrid = ({ page, name }: any) => {
-  const { data } = useCharacters(page, name);
+const CharacterGrid = ({ page }: any) => {
+  const search = useSelector((state: RootState) => state.search.value);
+  const { data, isLoading, isError } = useCharacters(page, search);
+
+  if (isLoading) return <p>Loading...</p>;
+  if (isError) return <p>Error</p>;
 
   return (
     <div className={styles.grid}>
