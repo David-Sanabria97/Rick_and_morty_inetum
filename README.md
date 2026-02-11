@@ -28,9 +28,9 @@ Incluye manejo de estado global, caché de datos y almacenamiento de recientes.
 
 ## 📦 Instalación
 
-    ```bash
+    
     npm install
-    ```
+    
 
 
 ## Ejecutar proyecto 
