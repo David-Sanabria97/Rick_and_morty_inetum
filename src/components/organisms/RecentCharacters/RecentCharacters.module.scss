@@ -12,5 +12,10 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 16px;
-  color: var(--color-primary);
+  color: var(--color-card);
+  font-family: monospace;
+}
+
+.container {
+  padding: 24px;
 }

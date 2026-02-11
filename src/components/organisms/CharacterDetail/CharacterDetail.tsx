@@ -18,7 +18,7 @@ export default function CharacterDetail({ character }: Props) {
   }, [character, dispatch]);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.container}>
       <img
         src={character.image}
         alt={character.name}
@@ -27,7 +27,6 @@ export default function CharacterDetail({ character }: Props) {
 
       <div>
         <h1 className={styles.name}>{character.name}</h1>
-
         <div className={styles.info}>
           <p>
             <span className={styles.label}>Status:</span> {character.status}

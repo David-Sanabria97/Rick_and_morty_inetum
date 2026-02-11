@@ -1,20 +1,15 @@
-.wrapper {
-  display: grid;
-  grid-template-columns: 300px 1fr;
+.container {
+  display: flex;
   gap: 32px;
   background-color: var(--color-card);
   border-radius: var(--radius);
   padding: 24px;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
 }
 
 .image {
   width: 100%;
   border-radius: var(--radius);
+  max-width: fit-content;
 }
 
 .name {

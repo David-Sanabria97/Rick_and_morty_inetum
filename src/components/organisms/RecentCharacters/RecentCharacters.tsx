@@ -5,9 +5,8 @@ import styles from "./RecentCharacters.module.scss";
 const RecentCharacters = () => {
   const recents = useSelector((state: RootState) => state.recent.items);
 
-  console.log("Recents from store:", recents);
   return (
-    <div>
+    <div className={styles.container}>
       <h2 className={styles.title}>Recently Viewed</h2>
       <div className={styles.grid}>
         {recents.map((character) => (

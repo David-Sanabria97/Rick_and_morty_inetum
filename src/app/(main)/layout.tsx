@@ -11,9 +11,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     <ReduxProvider>
       <ReactQueryProvider>
         <Header />
-
         <RecentCharacters />
-
         {children}
       </ReactQueryProvider>
     </ReduxProvider>
