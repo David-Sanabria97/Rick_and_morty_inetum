@@ -35,9 +35,9 @@ Incluye manejo de estado global, caché de datos y almacenamiento de recientes.
 
 ## Ejecutar proyecto 
 
-    ```bash
+    
     npm run dev
-    ```
+   
     
 
 puerto: http://localhost:3000
@@ -46,25 +46,25 @@ puerto: http://localhost:3000
 
 test sin coberturas
 
-    ```bash
+   
     npm test
-    ```
+    
     
 
 test con coberturas.  
 
-    ```bash
+    
     npm test:coverage
-    ```
+   
     
 
 los test se podran ver en la consola o en un archivo html generado en la ruta coverage/lcov-report/index.html
 
 ## Ejecutar Mutations testing (stryker)
 
-    ```bash
+    
     npm run test:mutation
-    ```
+   
     
 
 los test se podran ver en la consola o en un archivo html generado en la ruta reports/mutation/html/index.html
